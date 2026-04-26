@@ -24,7 +24,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 20, 2026</p>
+<p class="updated">Last updated: April 26, 2026</p>
 
 <h2>Overview</h2>
 <p>
@@ -35,35 +35,68 @@
 
 <h2>Data We Collect</h2>
 <p>
-  TripCoinX does <strong>not</strong> collect, store on any server, or transmit any
-  personal data.
-</p>
-<p>
-  The app stores the following settings <strong>locally on your device only</strong>,
-  using Android SharedPreferences:
+  TripCoinX collects only the following data:
 </p>
 <ul>
-  <li>Your selected source and target currencies</li>
-  <li>The exchange rate value you have entered manually</li>
+  <li><strong>Currency settings</strong> — your selected source and target currencies and the exchange
+    rate you have entered manually. Stored <strong>locally on your device only</strong> using Android
+    SharedPreferences. Never transmitted to any server.</li>
+  <li><strong>Anonymous feedback diagnostics</strong> — when you voluntarily submit a bug report or
+    feature request through the in-app Help &amp; Feedback screen, the following technical data is
+    sent together with your message to help resolve issues faster:
+    <ul>
+      <li>App version name and code</li>
+      <li>Android API level</li>
+      <li>Selected currency pair (source → target)</li>
+      <li>Active theme (system / light / dark)</li>
+      <li>Device language tag (e.g. <code>pl-PL</code>)</li>
+      <li>Network type at submission time (WiFi / Cellular / Offline)</li>
+      <li>A randomly generated anonymous UUID (stored locally, never linked to your identity)</li>
+    </ul>
+    <p>This data is transmitted only when you explicitly tap "Send" in the feedback form.
+    It does not include your name, email address, device model, location, or any other
+    personally identifiable information. The diagnostic payload is processed by
+    <a href="https://www.make.com/en/privacy-notice" target="_blank" rel="noopener">Make.com</a>
+    and used to create a private issue in the developer's bug tracker. It is not sold,
+    shared with third parties, or used for advertising.</p>
+  </li>
 </ul>
-<p>This data never leaves your device and is not accessible to us or any third party.</p>
 
 <h2>Third-Party Services</h2>
 <p>
-  TripCoinX does not include analytics, advertising SDKs, or crash reporting tools.
+  TripCoinX uses the following third-party services:
 </p>
-<p>
-  The app uses <strong>Google Play Billing Library</strong> to process in-app purchases.
-  When you make a purchase, Google processes the transaction on its own infrastructure.
-  This data is handled by Google in accordance with
-  <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.
-  We do not receive or store your payment details.
-</p>
+<ul>
+  <li><strong>frankfurter.app</strong> — provides exchange rate data sourced from the
+    <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">European Central Bank (ECB)</a>.
+    When the app refreshes rates in the background, it sends a standard HTTP GET request to
+    <code>api.frankfurter.app</code>. The request contains no user data — only the base currency
+    code (e.g. <code>EUR</code>). No API key or account is required. frankfurter.app is an
+    open-source, public service; its source is available at
+    <a href="https://github.com/frankfurter-app/frankfurter" target="_blank" rel="noopener">github.com/frankfurter-app/frankfurter</a>.</li>
+  <li><strong>Google Play Billing Library</strong> — processes in-app purchases. When you make a
+    purchase, Google processes the transaction on its own infrastructure. We do not receive or
+    store your payment details. See
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+  <li><strong>Make.com (Integromat)</strong> — receives feedback reports submitted through the
+    Help &amp; Feedback feature. Data is limited to the anonymous diagnostic payload described
+    above. Make.com's privacy notice is available at
+    <a href="https://www.make.com/en/privacy-notice" target="_blank" rel="noopener">make.com/en/privacy-notice</a>.</li>
+</ul>
 
 <h2>Data Sharing</h2>
 <p>
-  We do not share any data with third parties. No personal information is collected
-  by us, so none can be sold, traded, or transferred.
+  We do not collect or sell personal information. The only data transmitted to third
+  parties is:
+</p>
+<ul>
+  <li>Standard HTTP requests to <strong>frankfurter.app</strong> for exchange rate updates
+    — contains no user data.</li>
+  <li>Anonymous diagnostic data submitted through the <strong>Help &amp; Feedback</strong>
+    form — only when you explicitly tap "Send", only to Make.com, as described above.</li>
+</ul>
+<p>
+  No data is ever sold, traded, or shared for advertising purposes.
 </p>
 
 <h2>Data Retention and Deletion</h2>
