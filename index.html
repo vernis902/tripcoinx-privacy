@@ -24,7 +24,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: April 26, 2026</p>
+<p class="updated">Last updated: May 26, 2026</p>
 
 <h2>Overview</h2>
 <p>
@@ -35,15 +35,26 @@
 
 <h2>Data We Collect</h2>
 <p>
-  TripCoinX collects only the following data:
+  TripCoinX stores or transmits only the following categories of data, either directly or
+  through the service providers described below:
 </p>
 <ul>
   <li><strong>Currency settings</strong> — your selected source and target currencies and the exchange
     rate you have entered manually. Stored <strong>locally on your device only</strong> using Android
     SharedPreferences. Never transmitted to any server.</li>
-  <li><strong>Anonymous feedback diagnostics</strong> — when you voluntarily submit a bug report or
-    feature request through the in-app Help &amp; Feedback screen, the following technical data is
-    sent together with your message to help resolve issues faster:
+  <li><strong>Anonymous crash diagnostics</strong> — if Firebase Crashlytics is enabled for a given
+    release, TripCoinX may automatically send anonymous technical diagnostics to help us monitor
+    app stability. This may include crash stack traces, app version, Android version, selected
+    currency pair, and limited diagnostic breadcrumbs around events such as onboarding completion,
+    currency pair change, conversion attempts, rate refresh outcomes, or purchase flow milestones.
+    We do not send typed amounts, feedback message content, payment card details, contacts, or
+    precise location data through Crashlytics. Firebase may assign a pseudonymous installation
+    identifier for crash grouping. TripCoinX does not currently enable standalone Firebase
+    Analytics collection in production. If that changes in a future release, we will introduce it
+    with an explicit in-app choice and updated privacy disclosures.</li>
+  <li><strong>Feedback message and technical diagnostics</strong> — when you voluntarily submit a bug report or
+    feature request through the in-app Help &amp; Feedback screen, the text of your message is sent
+    together with the following technical data to help resolve issues faster:
     <ul>
       <li>App version name and code</li>
       <li>Android API level</li>
@@ -54,11 +65,24 @@
       <li>A randomly generated anonymous UUID (stored locally, never linked to your identity)</li>
     </ul>
     <p>This data is transmitted only when you explicitly tap "Send" in the feedback form.
-    It does not include your name, email address, device model, location, or any other
-    personally identifiable information. The diagnostic payload is processed by
+    The technical diagnostic payload does not include your name, email address, device model,
+    precise location, or other direct identifiers. However, any information you choose to type
+    into the feedback message itself will be transmitted as part of that report, so please avoid
+    including sensitive personal information unless it is necessary for your request. The payload
+    is processed by
     <a href="https://www.make.com/en/privacy-notice" target="_blank" rel="noopener">Make.com</a>
     and used to create a private issue in the developer's bug tracker. It is not sold,
     shared with third parties, or used for advertising.</p>
+  </li>
+  <li><strong>Ad-related technical data</strong> — when banner ads are shown in the free version,
+    the Google Mobile Ads SDK (AdMob) may automatically collect and share technical data needed
+    to serve, measure, and protect ads. According to Google's Mobile Ads SDK disclosure, this
+    may include your IP address, app and device identifiers, basic device and app diagnostics,
+    and product interaction events such as app launches, ad impressions, or taps. At the time
+    of this policy, TripCoinX removes the Android <code>AD_ID</code> permission from its manifest,
+    so the app build does not intentionally request the Android Advertising ID. Google may still
+    process other identifiers, such as App Set ID or similar technical identifiers, as part of
+    ad delivery, analytics, or fraud prevention.
   </li>
 </ul>
 
@@ -67,6 +91,14 @@
   TripCoinX uses the following third-party services:
 </p>
 <ul>
+  <li><strong>Google AdMob / Google Mobile Ads SDK</strong> — displays banner ads in the free
+    version of the app. When an ad request is made, Google may receive data such as IP address,
+    app and device identifiers, interaction data, and diagnostics for advertising, analytics,
+    and fraud prevention. Android Advertising ID collection is optional and may be disabled by
+    app configuration or Android system settings. At the time of this policy, TripCoinX removes
+    the <code>AD_ID</code> permission from its manifest. See
+    <a href="https://developers.google.com/ad-manager/mobile-ads-sdk/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Google Mobile Ads SDK data disclosure</a>
+    and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
   <li><strong>frankfurter.app</strong> — provides exchange rate data sourced from the
     <a href="https://www.ecb.europa.eu/stats/policy_and_exchange_rates/euro_reference_exchange_rates/html/index.en.html" target="_blank" rel="noopener">European Central Bank (ECB)</a>.
     When the app refreshes rates in the background, it sends a standard HTTP GET request to
@@ -78,25 +110,39 @@
     purchase, Google processes the transaction on its own infrastructure. We do not receive or
     store your payment details. See
     <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
+  <li><strong>Google Firebase Crashlytics</strong> — used to monitor crashes and collect anonymous
+    technical diagnostics described above. Firebase is operated by Google. Firebase Analytics is
+    not enabled in production at the time of this policy. If enabled in a future release, it will
+    be introduced separately with updated disclosures. See
+    <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security</a>
+    and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
   <li><strong>Make.com (Integromat)</strong> — receives feedback reports submitted through the
-    Help &amp; Feedback feature. Data is limited to the anonymous diagnostic payload described
-    above. Make.com's privacy notice is available at
+    Help &amp; Feedback feature. Data includes the message content you choose to send together
+    with the accompanying technical diagnostics described above. Make.com's privacy notice is available at
     <a href="https://www.make.com/en/privacy-notice" target="_blank" rel="noopener">make.com/en/privacy-notice</a>.</li>
 </ul>
 
 <h2>Data Sharing</h2>
 <p>
-  We do not collect or sell personal information. The only data transmitted to third
-  parties is:
+  We do not sell personal information. The third-party transmissions associated with normal
+  app use are:
 </p>
 <ul>
   <li>Standard HTTP requests to <strong>frankfurter.app</strong> for exchange rate updates
     — contains no user data.</li>
-  <li>Anonymous diagnostic data submitted through the <strong>Help &amp; Feedback</strong>
-    form — only when you explicitly tap "Send", only to Make.com, as described above.</li>
+  <li>Ad requests and related technical data to <strong>Google AdMob / Google Mobile Ads SDK</strong>
+    when ads are displayed — may include IP address, app and device identifiers, interaction data,
+    and diagnostics as described above.</li>
+  <li>Anonymous crash diagnostics to <strong>Google Firebase Crashlytics</strong>
+    — used only for app stability monitoring.</li>
+  <li>Feedback message content and accompanying diagnostic data submitted through the
+    <strong>Help &amp; Feedback</strong> form — only when you explicitly tap "Send", only to Make.com,
+    as described above.</li>
 </ul>
 <p>
-  No data is ever sold, traded, or shared for advertising purposes.
+  We do not sell or trade personal information. Crash diagnostics and feedback submissions are
+  not shared for advertising purposes. Ad-related technical data may be shared with Google AdMob
+  for ad delivery, measurement, analytics, and fraud prevention as described above.
 </p>
 
 <h2>Data Retention and Deletion</h2>
@@ -108,6 +154,11 @@
   <li>Going to <strong>Settings → Apps → TripCoinX → Clear Data</strong>, or</li>
   <li>Uninstalling the app</li>
 </ul>
+<p>
+  Data transmitted to third-party services such as Google AdMob, Google Play Billing,
+  Firebase Crashlytics, or Make.com is handled on those providers' systems and retained
+  according to their own privacy policies and retention practices.
+</p>
 
 <h2>Children's Privacy</h2>
 <p>
