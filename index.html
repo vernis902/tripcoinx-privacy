@@ -24,7 +24,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: May 26, 2026</p>
+<p class="updated">Last updated: May 28, 2026</p>
 
 <h2>Overview</h2>
 <p>
@@ -92,11 +92,13 @@
 </p>
 <ul>
   <li><strong>Google AdMob / Google Mobile Ads SDK</strong> — displays banner ads in the free
-    version of the app. When an ad request is made, Google may receive data such as IP address,
-    app and device identifiers, interaction data, and diagnostics for advertising, analytics,
-    and fraud prevention. Android Advertising ID collection is optional and may be disabled by
-    app configuration or Android system settings. At the time of this policy, TripCoinX removes
-    the <code>AD_ID</code> permission from its manifest. See
+    version of the app. To serve ads, limit ad frequency, and prevent fraud, this SDK utilizes 
+    device local storage and technical identifiers that function similarly to website cookies. 
+    When an ad request is made, Google may receive data such as IP address, app and device 
+    identifiers, interaction data, and diagnostics for advertising, analytics, and fraud prevention. 
+    At the time of this policy, TripCoinX removes the <code>AD_ID</code> permission from its manifest, meaning 
+    the standard Android Advertising ID is not collected; however, essential local caching and 
+    diagnostic tracking are still utilized by the SDK infrastructure as required for operation. See
     <a href="https://developers.google.com/ad-manager/mobile-ads-sdk/android/privacy/play-data-disclosure" target="_blank" rel="noopener">Google Mobile Ads SDK data disclosure</a>
     and <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a>.</li>
   <li><strong>frankfurter.app</strong> — provides exchange rate data sourced from the
